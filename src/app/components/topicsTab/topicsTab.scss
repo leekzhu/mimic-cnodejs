@@ -1,0 +1,24 @@
+.topicsTab-tab-link {
+  color: #80bd01 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+.topicsTab-tab-link:hover,.topicsTab-tab-link:focus {
+  border: 0;
+  border-radius: 0;
+
+}
+.topicsTab-active {
+  a:hover, a:focus {
+    background-color: transparent !important;
+  }
+}
+.topicsTab-active:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  content: "";
+  background-color: #d26911;
+}

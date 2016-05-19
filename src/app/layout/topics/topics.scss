@@ -1,0 +1,57 @@
+.topics {
+  &-header {
+    margin-top: 20px;
+  }
+  &-item {
+    overflow: visible;
+    padding: 8px 10px;
+    &-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    &-meta {
+      display: inline-block;
+      margin-left: 14px;
+      width: 85px;
+      &-replyCount {
+        color: #FF5577;
+        font-size: 20px;
+      }
+      &-visitCount {
+        color: #999999;
+        font-size: 11px;
+      }
+    }
+    &-tab {
+      display: inline-block;
+      width: 30px;
+    }
+    &-title {
+      display: inline-block;
+      margin: 5px 5px;
+    }
+    &-lastReply {
+      display: inline-block;
+      font-size: 10px;
+      color: #888888;
+    }
+  }
+  &-item:first-child, &-item:last-child {
+    border-radius: 0;
+  }
+  &-loader {
+    height: 50px;
+    position: relative;
+  }
+  &-pager {
+    margin-top: -10px;
+  }
+}

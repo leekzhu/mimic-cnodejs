@@ -1,0 +1,3 @@
+<uib-tabset active="vm.active">
+  <uib-tab ng-repeat="tab in vm.tabs" heading="{{tab.label}}" template-url="app/components/topicsTab/tab.html" select="vm.goToState(tab.toState)"></uib-tab>
+</uib-tabset>

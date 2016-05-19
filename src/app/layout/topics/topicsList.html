@@ -1,0 +1,22 @@
+<div class="list-group">
+  <a ng-repeat="topic in topics.topics" ui-sref="topic({id: topic.id})" class="list-group-item topics-item">
+    <div class="pull-left thumbnail topics-item-avatar" uib-tooltip="{{topic.author.loginname}}" tooltip-placement="bottom">
+      <img ng-src="{{topic.author.avatar_url}}">
+    </div>
+    <div class="topics-item-meta">
+      <span class="topics-item-meta-replyCount">{{topic.reply_count}}</span>
+      <span class="topics-item-meta-visitCount">/ {{topic.visit_count}}</span>
+    </div>
+    <div class="topics-item-tab">
+      <tab-tag cnode-tab="topic.tab" is-top="topic.top" is-good="topic.good"></tab-tag>
+    </div>
+    <h5 class="topics-item-title">{{topic.title}}</h5>
+    <h6 class="topics-item-lastReply pull-right">
+      <span class="glyphicon glyphicon-comment"></span>
+       {{topic.last_reply_at | dateCount }}
+    </h6>
+  </a>
+</div>
+<div ng-hide="topics.loaded" class="topics-loader">
+  <cnode-loader></cnode-loader>
+</div>

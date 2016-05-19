@@ -1,0 +1,32 @@
+<cnode-navbar></cnode-navbar>
+<div class="container">
+  <article class="topicArticle">
+    <header class="topicArticle-header">
+      <div class="pull-left thumbnail topicArticle-header-avatar">
+        <img ng-src="{{topic.article.author.avatar_url}}">
+      </div>
+      <h3 class="topicArticle-header-title">{{topic.article.title}}</h3>
+      <div class="topicArticle-header-tab">
+        <tab-tag cnode-tab="topic.article.tab" is-top="topic.article.top" is-good="topic.article.good"></tab-tag>
+      </div>
+      <div class="topicArticle-header-meta">
+        <span>
+          发布于{{topic.article.create_at | dateCount}}
+        </span>
+        <span>
+          作者 {{topic.article.author.loginname}}
+        </span>
+        <span>
+          {{topic.article.visit_count}} 次浏览
+        </span>
+        <span>
+          来自 分享
+        </span>
+      </div>
+    </header>
+    <hr>
+    <section class="topicArticle-content">
+      <div ng-bind-html="topic.article.content"></div>
+    </section>
+  </article>
+</div>
